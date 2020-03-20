@@ -39,7 +39,7 @@ public class SerialazeTest {
     }
 
     @Test
-    public void serializerNotEquals(){
+    public void serializerTwoLists(){
         Serialaze.serialize(animalList1, "animalFile1");
         Serialaze.serialize(animalList2,"animalFile2");
         Serialaze.deserialize("animalFile1");
