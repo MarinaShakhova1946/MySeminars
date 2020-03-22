@@ -1,12 +1,13 @@
 package seminar1;
 
+import java.io.Serializable;
 import java.util.Objects;
 
-public class Food {
-    private final String Name;
-    private final double Count;
+public class Food implements Serializable {
+    private String Name;
+    private int Count;
 
-    public Food(String Name, double Count) {
+    public Food(String Name, int Count) {
         this.Name=Name;
         this.Count=Count;
     }
@@ -15,8 +16,16 @@ public class Food {
         return Name;
     }
 
-    public double getCount() {
+    public void setName(String Name) {
+        this.Name = Name;
+    }
+
+    public int getCount() {
         return Count;
+    }
+
+    public void setCount(int Count) {
+        this.Count = Count;
     }
 
     @Override

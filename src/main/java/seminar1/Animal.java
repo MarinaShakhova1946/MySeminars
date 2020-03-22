@@ -5,10 +5,10 @@ import java.util.List;
 import java.util.Objects;
 
 public class Animal implements Serializable {
-    private final KindAnimal Type;
-    private final String Name;
-    private final int Age;
-    private final List<Food> listFood;
+    private KindAnimal Type;
+    private String Name;
+    private int Age;
+    private List<Food> listFood;
 
 
     public Animal(KindAnimal Type, String Name, int Age, List<Food> Food) {
@@ -18,22 +18,37 @@ public class Animal implements Serializable {
         this.listFood = Food;
     }
 
+    public KindAnimal getType() {
+        return Type;
+    }
+
+    public void setKindAnimal(KindAnimal Kind) {
+        this.Type = Kind;
+    }
+
     public String getName() {
         return Name;
     }
 
-    public KindAnimal getType() {
-        return Type;
+    public void setName(String Name) {
+        this.Name = Name;
     }
 
     public int getAge() {
         return Age;
     }
 
+    public void setAge(int Age) {
+        this.Age = Age;
+    }
+
     public List<Food> getFoodList() {
         return listFood;
     }
 
+    public void setFoodList(List<Food> listFood) {
+        this.listFood = listFood;
+    }
 
     @Override
     public String toString() {
